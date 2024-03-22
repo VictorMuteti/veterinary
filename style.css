@@ -1,0 +1,126 @@
+.image-area{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.text-area{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.fixed{
+    height: 100px;
+    width: 100%;
+    background-color: blueviolet;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.static{
+    height: 200px;
+    width: 100%;
+    background-color: yellow;
+    position: static;
+
+}
+
+.relative{
+    height: 300px;
+    width: 100%;
+    background-color: red;
+    position: relative;
+}
+
+.absolute{
+    height: 200px;
+    width: 50%;
+    background-color: black;
+    position: absolute;
+    right: 0px;
+    top: 300px;
+
+}
+
+.sticky{
+    height: 300px;
+    width: 100%;
+    background-color: blue;
+    position: sticky;
+    left: 0px;
+    bottom: 0px;
+
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+
+}
+
+.container .box{
+    width: 100%;
+}
+
+.container .box .image img{
+    width: 100%;
+}
+
+.animation-area{
+    height: 400px;
+    width: 100%;
+
+}
+
+.animation-area .animation-box{
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    animation: sliding 1s ease-in-out 1s infinite;
+}
+
+@keyframes sliding{
+    from{
+        transform: translateX(100%);
+        background-color: brown;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+.animation-area1{
+    height: 400px;
+    width: 100%;
+
+}
+
+.animation-area1 .animation-box1{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce{
+    from{
+        transform: translateY(0%);
+        background-color: blue;
+    }
+
+    to{
+        transform: translateY(-100%);
+    }
+}
